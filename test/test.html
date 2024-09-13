@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Panel</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <!-- Start Search Panel -->
+    <div class="search-panel">
+        <ul class="tabs">
+            <div class="tab-link current" data-tab="flight">
+                <li>Flight</li>
+            </div>
+            <div class="tab-link" data-tab="hotel">
+                <li>Hotel</li>
+            </div>
+            <div class="tab-link" data-tab="rent-car">
+                <li>Rent a Car</li>
+            </div>
+        </ul>
+
+        <div class="tab-content current" id="flight">
+            <form>
+                <div class="form-row">
+                    <select>
+                        <option value="round-trip">Return</option>
+                        <option value="one-way">One-way</option>
+                        <option value="multi-city">Multi-city</option>
+                    </select>
+                    <select>
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                        <option value="5">5 Passengers</option>
+                        <option value="6">6 Passengers</option>
+                    </select>
+                    <select>
+                        <option value="economy">Economy Class</option>
+                        <option value="business">Business Class</option>
+                        <option value="first">First Class</option>
+                    </select>
+                </div>
+                <div class="form-row location-inputs">
+                    <div class="input-group from">
+                        <h6>FROM</h6>
+                        <input type="text" id="from" placeholder="Country, City, or Airport" />
+                        <h6>A/P, Dep, Country</h6>
+                        <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
+                    </div>
+                    <div class="input-group to">
+                        <h6>TO</h6>
+                        <input type="text" id="to" placeholder="Country, City, or Airport" />
+                        <h6>A/P, Dep, Country</h6>
+                    </div>
+                </div>
+                <div class="form-row date-inputs">
+                    <div class="input-group dates">
+                        <div class="departure">
+                            <h6>Departure</h6>
+                            <input type="date" id="departure" />
+                            <div class="date-control">
+                                <ul>
+                                    <li>Prev</li>
+                                    <li>Next</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="return">
+                            <h6>Return</h6>
+                            <input type="date" id="return" />
+                            <div class="date-control">
+                                <ul>
+                                    <li>Prev</li>
+                                    <li>Next</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Search Flights &rarr;</button>
+            </form>
+        </div>
+        <div class="tab-content" id="hotel">
+            <form>
+                <div class="input-group">
+                    <label for="hotel-destination">Destination</label>
+                    <input type="text" id="hotel-destination" placeholder="Destination" />
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="check-in">Check-in</label>
+                        <input type="date" id="check-in" />
+                    </div>
+                    <div class="input-group">
+                        <label for="check-out">Check-out</label>
+                        <input type="date" id="check-out" />
+                    </div>
+                </div>
+                <button type="submit">Search Hotels &rarr;</button>
+            </form>
+        </div>
+        <div class="tab-content" id="rent-car">
+            <form>
+                <div class="input-group">
+                    <label for="pick-up">Pick-up Location</label>
+                    <input type="text" id="pick-up" placeholder="Pick-up Location" />
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="pick-up-date">Pick-up Date</label>
+                        <input type="date" id="pick-up-date" />
+                    </div>
+                    <div class="input-group">
+                        <label for="drop-off-date">Drop-off Date</label>
+                        <input type="date" id="drop-off-date" />
+                    </div>
+                </div>
+                <button type="submit">Search Cars &rarr;</button>
+            </form>
+        </div>
+    </div>
+    <!-- End Search Panel -->
+
+    <div class="search-panel-mobile">
+        <div class="form-row">
+            <select>
+                <option value="flight">Flight</option>
+                <option value="hotel">Hotel</option>
+                <option value="rent-car">Rent a Car</option>
+            </select>
+        </div>
+
+        <form class="form-style">
+            <div class="tabs">
+                <table class="styled-table">
+                    <tr>
+                        <td>
+                            <div class="cell-content">
+                                <img src="../res/img/icons/material-symbols_airplane-ticket.svg" />
+                                <select>
+                                    <option value="round-trip">Return</option>
+                                    <option value="one-way">1-way</option>
+                                    <option value="multi-city">Multi</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-content">
+                                <img src="../res/img/icons/bi_people-fill.svg" />
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-content">
+                                <img src="../res/img/icons/mingcute_seat-fill.svg" />
+                                <select>
+                                    <option value="economy">Economy</option>
+                                    <option value="business">Business</option>
+                                    <option value="first">First</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-row location-inputs">
+                <div class="input-group from">
+                    <label for="from">From</label>
+                    <input type="text" id="from" placeholder="Country, City, or Airport" />
+                    <img src="../res/img/icons/icomoon-free_cross.svg" />
+                    <div class="switch-btn">
+                        <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
+                    </div>
+                </div>
+
+                <div class="input-group to">
+                    <label for="to">To</label>
+                    <input type="text" id="to" placeholder="Country, City, or Airport" />
+                    <img src="../res/img/icons/icomoon-free_cross.svg" />
+                </div>
+            </div>
+            <div class="form-row date-inputs">
+                <div class="input-group departure">
+                    <div class="date-mobile">
+                        <label for="departure">Departure</label>
+                        <input type="date" id="departure" />
+                    </div>
+                </div>
+                <div class="input-group return">
+                    <div class="date-mobile">
+                        <label for="return">Return</label>
+                        <input type="date" id="return" />
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Search Flights</button>
+
+        </form>
+    </div>
+
+
+    <div class="filter-container">
+        <div class="filter-bar">
+            <div class="filter-item" id="best">
+                Best
+                <div class="dropdown" id="dropdown-best">
+                    <ul>
+                        <li>Option 1</li>
+                        <li>Option 2</li>
+                        <li>Option 3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-item" id="sort">
+                Sort
+                <div class="dropdown" id="dropdown-sort">
+                    <ul>
+                        <li>Ascending</li>
+                        <li>Descending</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-item" id="stops">
+                Stops
+                <div class="dropdown" id="dropdown-stops">
+                    <ul>
+                        <li>Non-stop</li>
+                        <li>1 Stop</li>
+                        <li>2+ Stops</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Add more filters as needed -->
+        </div>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+
+</html>

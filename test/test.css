@@ -1,0 +1,410 @@
+/* Start Search Panel */
+.search-panel {
+  margin: 60px auto;
+  max-width: 1120px;
+  background-color: #fff;
+  padding: 20px 20px 40px 20px;
+  border-radius: 0 15px 15px 15px;
+  box-shadow: 0 0 5px #484848;
+  position: relative; /* Allow button to be positioned partially outside */
+}
+
+.search-panel .tabs {
+  display: flex;
+  justify-content: flex-start; /* Align tabs to the left */
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: #191919;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  width: 50%; /* Adjust width to fit content */
+  position: absolute;
+  top: -66px;
+  left: 0px;
+  box-shadow: 0 0 5px #484848;
+}
+
+.search-panel .tab-link {
+  padding: 15px 20px;
+  text-align: center;
+  background-color: #191919ed;
+  color: #FFF;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  /* border-right: 1px solid #dfdfdf; */
+  flex: 1; /* Adjust flex to distribute space evenly */
+}
+
+.search-panel .tab-link:last-child {
+  border-right: none;
+}
+
+.search-panel .tab-link.current {
+  background-color: #FFF;
+  color: #191919;
+  /* border-bottom: 2px solid #484848; */
+}
+
+.search-panel .tab-content {
+  display: none;
+}
+
+.search-panel .tab-content.current {
+  display: block;
+}
+
+.search-panel form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 46px;
+  color: #484848;
+}
+
+.search-panel form select,
+.search-panel form input {
+  padding: 12px 0px;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  flex: 1;
+  font-size: 16px;
+}
+
+.search-panel form select {
+  background-color: #f9f9f9;
+  color: #484848;
+  padding: 5px 10px;
+}
+
+.search-panel form button {
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  flex: 0 0 auto; /* Button takes only necessary space */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  transform: translateY(50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-panel form button:hover {
+  background-color: #484848;
+  transform: translateY(50%) translateX(-2px);
+}
+
+.search-panel .location-inputs {
+  display: flex;
+  gap: 20px;
+  flex: 3.5;
+}
+
+.search-panel .location-inputs {
+  
+}
+
+.search-panel h6 {
+  font-weight: normal;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.search-panel .date-inputs {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+}
+
+.search-panel .date-inputs .date-control {
+  /* margin: 0;
+  padding: 0;
+  list-style: none; */
+}
+
+.search-panel .date-inputs .date-control ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-panel .date-inputs .date-control li {
+  margin: 0;
+  padding: 0 10px;
+  display: inline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-panel form .from,
+.search-panel form .to {
+  flex: 1;
+}
+
+.search-panel form .departure,
+.search-panel form .return {
+  flex: 1;
+}
+
+.search-panel .form-row {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 26px;
+}
+
+.search-panel .form-row select,
+.search-panel .form-row input {
+  flex: 1 1 30%; /* Allow flexible resizing */
+  border: none;
+  background-color: #fff;
+  /* -webkit-appearance: none;
+  appearance: none; */
+}
+
+.search-panel .form-row select {
+  max-width: 140px;
+}
+
+.search-panel form .input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px #191919;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.search-panel form .input-group.dates {
+display: flex;
+flex-direction: row;
+}
+
+.search-panel form .input-group input {
+  font-size: 18px;
+  font-weight: bold;
+  color: #191919;
+  outline: none;
+}
+
+.search-panel form .input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+.search-panel .input-group img {
+  width: 34px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  rotate: 90deg;
+  transform: translate(-50%,-90%);
+  z-index: 1;
+}
+
+/* End Search Panel */
+
+/* Start Search Panel - Mobile */
+.search-panel-mobile {
+  margin: 16px auto;
+  max-width: 480px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Allow button to be positioned partially outside */
+}
+
+.search-panel-mobile form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.search-panel-mobile .form-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-panel-mobile .form-row img {
+  width: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-panel-mobile .form-row select,
+.search-panel-mobile .form-row input {
+  flex: 1 1 30%; /* Allow flexible resizing */
+  min-width: 60%;
+  border-radius: 10px;
+}
+
+.search-panel-mobile .location-inputs .input-group {
+  display: flex;
+  box-shadow: 0 0 5px #191919;
+  border-radius: 10px;
+}
+
+.search-panel-mobile .location-inputs .input-group label {
+  margin: auto;
+  padding: 15px;
+  color: #484848;
+  width: 10%;
+}
+
+.search-panel-mobile .location-inputs .input-group input {
+  margin: auto;
+  box-shadow: none;
+  min-width: 60%;
+}
+
+.search-panel-mobile .location-inputs .switch-btn img {
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  left: 24px;
+  top: 175px;
+  padding: 0;
+}
+
+.search-panel-mobile select {
+  color: #fff;
+  padding: 5px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid #dfdfdf;
+  background-color: #191919;
+  margin-bottom: 0px;
+}
+
+.search-panel-mobile form select,
+.search-panel-mobile form input {
+  border: none;
+  border-radius: 0px;
+  flex: 1;
+  font-size: 14px;
+  color: #191919;
+  background-color: #fff;
+}
+
+.search-panel-mobile form .tabs select {
+  border-radius: 0px;
+  box-shadow: none;
+  padding: 5px 0px;
+}
+
+.search-panel-mobile .tabs {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%; /* Adjust width to fit content */
+  border-radius: 10px;
+  border: 1px #dfdfdf;
+  box-shadow: 0 0 5px #191919;
+}
+
+.search-panel-mobile .tabs .select {
+  background-color: #dfdfdf;
+  border-radius: 0;
+}
+
+.search-panel-mobile form button {
+  background-color: #191919;
+  color: white;
+  cursor: pointer;
+
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px;
+
+  border-radius: 10px;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.styled-table {
+  border-collapse: collapse; /* Keep borders separate between cells */
+  width: 100%;
+}
+
+.styled-table .cell-content {
+  display: flex;
+}
+
+.styled-table .cell-content img {
+  width: 18px;
+  padding: 0 10px;
+}
+
+.styled-table select {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Remove default arrow */
+}
+
+.styled-table td {
+  padding: 10px;
+  border: 1px solid #ccc; /* Add borders to individual cells */
+}
+
+.search-panel-mobile .date-mobile {
+  padding: 15px;
+  box-shadow: 0 0 5px #191919;
+  border-radius: 10px;
+  display: flex;
+}
+
+.search-panel-mobile .date-mobile label {
+  color: #484848;
+  width: 24%;
+}
+
+/* End Search Panel - Mobile */
+
+/* Hide the .search-panel-mobile and show the .search-panel when the screen is wider than 480px */
+@media (min-width: 581px) {
+  .search-panel-mobile {
+    display: none;
+  }
+  .search-panel {
+    display: block;
+  }
+}
+
+/* Hide the .search-panel and show the .search-panel-mobile when the screen is 480px or narrower */
+@media (max-width: 580px) {
+  .search-panel-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .search-panel {
+    display: none;
+  }
+}

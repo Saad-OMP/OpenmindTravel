@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenmindTravel</title>
+
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/master.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Start Search Panel -->
+
+  <!-- End Search Panel -->
+
+  <!-- Start Landing Page -->
+  <div class="landing-page">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="header-area">
+        <div class="logo">
+          <img src="\res\img\OMT_logo_black_transparent.png" alt="Logo" />
+        </div>
+        <div class="links-container">
+          <ul class="links">
+            <li><a href="#" data-section=".about-us">Map</a></li>
+            <li><a href="#" data-section=".skills">Destinations</a></li>
+            <li><a href="#" data-section=".gallery">Deals</a></li>
+            <li><a href="#" data-section=".timeline">Tips</a></li>
+          </ul>
+          <button class="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="social-icons">
+          <a href="#"><img src="res/img/icon_insta.PNG" alt="Instagram"></a>
+          <a href="#"><img src="res/img/icon_fb.PNG" alt="Facebook"></a>
+          <a href="#"><img src="res/img/icon_link.png" alt="OMP Website"></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="introduction-text">
+        <h1>Ready for takeoff?</h1>
+        <h1>Find Your <span>Flight!</span></h1>
+      </div>
+    </div>
+    <div class="hero-body">
+      <!-- Start Search Panel -->
+      <div>
+        <div class="search-panel">
+          <ul class="tabs">
+            <div class="tab-link current" data-tab="flight">
+              <li>Flight</li>
+            </div>
+            <div class="tab-link" data-tab="hotel">
+              <li>Hotel</li>
+            </div>
+            <div class="tab-link" data-tab="rent-car">
+              <li>Rent a Car</li>
+            </div>
+          </ul>
+
+          <div class="tab-content current" id="flight">
+            <form>
+              <div class="form-row">
+                <select>
+                  <option value="round-trip">Return</option>
+                  <option value="one-way">One-way</option>
+                  <option value="multi-city">Multi-city</option>
+                </select>
+                <select>
+                  <option value="1">1 Passenger</option>
+                  <option value="2">2 Passengers</option>
+                  <option value="3">3 Passengers</option>
+                  <option value="4">4 Passengers</option>
+                  <option value="5">5 Passengers</option>
+                  <option value="6">6 Passengers</option>
+                </select>
+                <select>
+                  <option value="economy">Economy</option>
+                  <option value="business">Business</option>
+                  <option value="first">First</option>
+                </select>
+              </div>
+              <div class="form-row location-inputs">
+                <div class="input-group from">
+                  <h6>FROM</h6>
+                  <input type="text" id="from" placeholder="Country, City, or Airport" />
+                  <h6>A/P, Dep, Country</h6>
+                  <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
+                </div>
+                <div class="input-group to">
+                  <h6>TO</h6>
+                  <input type="text" id="to" placeholder="Country, City, or Airport" />
+                  <h6>A/P, Dep, Country</h6>
+                </div>
+              </div>
+              <div class="form-row date-inputs">
+                <div class="input-group dates">
+
+
+
+                  <div class="departure">
+                    <h6>Departure</h6>
+                    <input type="date" id="departure" />
+                    <div class="date-control">
+                      <ul>
+                        <li>Prev</li>
+                        <li>Next</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="return">
+                    <h6>Return</h6>
+                    <input type="date" id="return" />
+                    <div class="date-control">
+                      <ul>
+                        <li>Prev</li>
+                        <li>Next</li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+              <button type="submit">Search Flights &rarr;</button>
+            </form>
+          </div>
+          <div class="tab-content" id="hotel">
+            <form>
+              <div class="input-group">
+                <label for="hotel-destination">Destination</label>
+                <input type="text" id="hotel-destination" placeholder="Destination" />
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="check-in">Check-in</label>
+                  <input type="date" id="check-in" />
+                </div>
+                <div class="input-group">
+                  <label for="check-out">Check-out</label>
+                  <input type="date" id="check-out" />
+                </div>
+              </div>
+              <button type="submit">Search Hotels &rarr;</button>
+            </form>
+          </div>
+          <div class="tab-content" id="rent-car">
+            <form>
+              <div class="input-group">
+                <label for="pick-up">Pick-up Location</label>
+                <input type="text" id="pick-up" placeholder="Pick-up Location" />
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="pick-up-date">Pick-up Date</label>
+                  <input type="date" id="pick-up-date" />
+                </div>
+                <div class="input-group">
+                  <label for="drop-off-date">Drop-off Date</label>
+                  <input type="date" id="drop-off-date" />
+                </div>
+              </div>
+              <button type="submit">Search Cars &rarr;</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Search Panel -->
+
+      <!-- Start Search Panel - Mobile -->
+      <div class="search-panel-mobile">
+        <div class="form-row">
+          <select>
+            <option value="flight">Flight</option>
+            <option value="hotel">Hotel</option>
+            <option value="rent-car">Rent a Car</option>
+          </select>
+        </div>
+
+        <form class="form-style">
+          <div class="tabs">
+            <table class="styled-table">
+              <tr>
+                <td>
+                  <div class="cell-content">
+                    <img src="../res/img/icons/material-symbols_airplane-ticket.svg" />
+                    <select>
+                      <option value="round-trip">Return</option>
+                      <option value="one-way">1-way</option>
+                      <option value="multi-city">Multi</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-content">
+                    <img src="../res/img/icons/bi_people-fill.svg" />
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-content">
+                    <img src="../res/img/icons/mingcute_seat-fill.svg" />
+                    <select>
+                      <option value="economy">Economy</option>
+                      <option value="business">Business</option>
+                      <option value="first">First</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="form-row location-inputs">
+            <div class="input-group from">
+              <label for="from">From</label>
+              <input type="text" id="from" placeholder="Country, City, or Airport" />
+              <img src="../res/img/icons/icomoon-free_cross.svg" />
+              <div class="switch-btn">
+                <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
+              </div>
+            </div>
+
+            <div class="input-group to">
+              <label for="to">To</label>
+              <input type="text" id="to" placeholder="Country, City, or Airport" />
+              <img src="../res/img/icons/icomoon-free_cross.svg" />
+            </div>
+          </div>
+          <div class="form-row date-inputs">
+            <div class="input-group departure">
+              <div class="date-mobile">
+                <label for="departure">Departure</label>
+                <input type="date" id="departure" />
+              </div>
+            </div>
+            <div class="input-group return">
+              <div class="date-mobile">
+                <label for="return">Return</label>
+                <input type="date" id="return" />
+              </div>
+            </div>
+          </div>
+          <button type="submit">Search Flights</button>
+
+        </form>
+      </div>
+      <!-- End Search Panel - Mobile -->
+    </div>
+  </div>
+
+  <!-- End Landing Page -->
+
+  <!-- Start About Us -->
+  <div class="container">
+    <div class="about-us">
+      <div class="info-box">
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, eum
+          quae aspernatur nostrum itaque inventore quod esse praesentium est
+          dolor! Dolore explicabo molestias neque animi distinctio ab placeat
+          magni labore.
+        </p>
+      </div>
+      <div class="image-box">
+        <img src="imgs/about-us.png" alt="About Us" />
+      </div>
+    </div>
+  </div>
+  <!-- End About Us -->
+
+  <!-- Start Gallery -->
+  <div class="gallery">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <div class="images-box">
+        <img src="imgs/01.jpg" alt="Gallery Image 1" />
+        <img src="imgs/02.jpg" alt="Gallery Image 2" />
+        <img src="imgs/03.jpg" alt="Gallery Image 3" />
+        <img src="imgs/04.jpg" alt="Gallery Image 4" />
+        <img src="imgs/05.jpg" alt="Gallery Image 5" />
+        <img src="imgs/06.jpg" alt="Gallery Image 6" />
+        <img src="imgs/07.jpg" alt="Gallery Image 7" />
+        <img src="imgs/08.jpg" alt="Gallery Image 8" />
+        <img src="imgs/09.jpg" alt="Gallery Image 9" />
+        <img src="imgs/10.jpg" alt="Gallery Image 10" />
+      </div>
+    </div>
+  </div>
+  <!-- End Gallery -->
+
+  <!-- Start Timeline -->
+  <div class="timeline">
+    <div class="container">
+      <div class="timeline-content">
+
+        <div class="year">2023</div>
+
+
+        <div class="left">
+          <div class="content">
+            <h3>Testing Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eius itaque temporibus odit pariatur
+              aliquam animi nobis? Eligendi similique excepturi nostrum voluptates iusto ipsum laboriosam minus
+              deserunt, animi earum expedita?</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="right">
+          <div class="content">
+            <h3>Testing Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eius itaque temporibus odit pariatur
+              aliquam animi nobis? Eligendi similique excepturi nostrum voluptates iusto ipsum laboriosam minus
+              deserunt, animi earum expedita?</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="year">2022</div>
+        <div class="left">
+          <div class="content">
+            <h3>Testing Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eius itaque temporibus odit pariatur
+              aliquam animi nobis? Eligendi similique excepturi nostrum voluptates iusto ipsum laboriosam minus
+              deserunt, animi earum expedita?</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="left">
+          <div class="content">
+            <h3>Testing Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eius itaque temporibus odit pariatur
+              aliquam animi nobis? Eligendi similique excepturi nostrum voluptates iusto ipsum laboriosam minus
+              deserunt, animi earum expedita?</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End Timeline -->
+
+  <!-- Start Features -->
+  <div class="features">
+    <h2>Our Features</h2>
+    <div class="container">
+      <div class="feat-box">
+        <img src="imgs/icon-01.png" alt="" loading="lazy">
+        <h4>E-commerce Solutions</h4>
+        <p>Comprehensive e-commerce platform, empowering businesses to sell online seamlessly.</p>
+      </div>
+      <div class="feat-box">
+        <img src="imgs/icon-02.png" alt="" loading="lazy">
+        <h4>Integrated Marketing Tools</h4>
+        <p>A suite of integrated marketing tools, streamlining your marketing efforts and boosting ROI.</p>
+      </div>
+      <div class="feat-box">
+        <img src="imgs/icon-03.png" alt="" loading="lazy">
+        <h4>Financial Management</h4>
+        <p>Financial management solutions, providing real-time insights and empowering data-driven decisions.</p>
+      </div>
+      <div class="feat-box">
+        <img src="imgs/icon-04.png" alt="" loading="lazy">
+        <h4>Data Analytics</h4>
+        <p>Robust data analytics, unlocking valuable insights and optimizing your marketing strategy.</p>
+      </div>
+      <div class="feat-box">
+        <img src="imgs/icon-05.png" alt="" loading="lazy">
+        <h4>Content Marketing</h4>
+        <p>Compelling content marketing strategies, engaging your audience and driving meaningful results.</p>
+      </div>
+      <div class="feat-box">
+        <img src="imgs/icon-06.png" alt="" loading="lazy">
+        <h4>Performance Optimization</h4>
+        <p>Performance optimization services, ensuring your software runs smoothly and delivers exceptional results.</p>
+      </div>
+      <div class="clearfix">
+      </div>
+    </div>
+  </div>
+  <!-- End Features -->
+
+  <!-- Start Testimonials -->
+  <div class="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="ts-box">
+        <p>Special Design transformed our online presence! Their innovative software solutions have streamlined our
+          business operations, leading to a 30% increase in efficiency.</p>
+        <div class="person-info">
+          <img src="imgs/person-01.jfif" alt="" style="width: 80px; height: 80px;">
+          <h4>Fijla Zaatar</h4>
+          <p>CEO Batata Services</p>
+        </div>
+      </div>
+      <div class="ts-box">
+        <p>I was impressed with the level of customization and support provided by Special Design. Their team was
+          always available to help and the final product exceeded my expectations.</p>
+        <div class="person-info">
+          <img src="imgs/person-02.png" alt="" style="width: 80px; height: 80px;">
+          <h4>Carl Johnson </h4>
+          <p>Entrepreneur</p>
+        </div>
+      </div>
+      <div class="ts-box">
+        <p>The software solutions offered by Special Design have been a game-changer for our company. The integration
+          was seamless, and our staff quickly adapted to the new system.</p>
+        <div class="person-info">
+          <img src="imgs/person-03.jfif" alt="" style="width: 80px; height: 80px;">
+          <h4>Michael Brown</h4>
+          <p>Operations Manager at BizCorp</p>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <!-- End Testimonials -->
+
+  <!-- Start Contact Us -->
+  <div class="contact">
+    <div class="overlay"></div>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="" onsubmit="sendEmail(); reset(); return false;">
+        <div class="left">
+          <input type="text" placeholder="Your Name" name="username" id="name">
+          <input type="tel" placeholder="Your Phone" name="phone" id="phone">
+          <input type="email" placeholder="Your Email" name="email" id="email">
+          <input type="text" placeholder="Subject" name="subject" id="subject">
+        </div>
+        <div class="right">
+          <textarea name="message" placeholder="Your Message" id="message"></textarea>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- End Contact Us -->
+  <!-- Start Footer -->
+  <div class="footer">Innovated with intention by Mohammad SAAD</div>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="js/master.js"></script>
+
+
+</body>
+
+</html>
