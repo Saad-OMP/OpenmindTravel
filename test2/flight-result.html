@@ -1,0 +1,162 @@
+<title>[:origin_name:] - [:destination_name:], [:dates:] - Flights search</title>
+<meta name="description" content="From [:origin_name:] to [:destination_name:], [:dates:], [:passengers:], [:flight_class:]"/>
+<meta property="og:title" content="I found a cheap flight ticket!" />
+<meta property="og:description" content="From [:origin_name:] to [:destination_name:], [:dates:], [:passengers:], [:flight_class:]" />
+<meta content="en_US" property="og:locale">
+<meta content="product.group" property="og:type">
+<meta content="[:og_image:]" property="og:image">
+<meta name="google-adsense-account" content="ca-pub-2920767414692851">
+
+
+<meta content="I found a cheap flight ticket!" name="twitter:title">
+<meta content="From [:origin_name:] to [:destination_name:], [:dates:], [:passengers:], [:flight_class:]" name="twitter:description">
+<meta content="summary_large_image" name="twitter:card">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ 
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+ <button type="button" class="btn btn-primary" data-dismiss="modal" >Close this window to return.</button>
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">
+          
+          
+          <h4 class="alert-heading">💬 Attention, please!</h4>
+          <div class="left"> 
+<img src="https://openmind.travel/file/2023/10/happy-family-flights.png" class="img-fluid" width="100px"></img> </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="alert alert-success" role="alert">
+  
+  <p><strong>🎫: Airfares are constantly updated. <h6>The final price may be even lower!</h6> 
+  Please  🖱️ <u>click on the Airline logo</u> to see the final price. </strong>
+  </p><hr>
+  <p class="mb-0"><p> By default, the results show the cheapest offer. To sort by "Travel time", "Direct flight", etc., <br/>
+          💻 On desktop, use the filters options on the left panel. <br/>
+          📲 On mobile, click on the "FILTERS" button in the bottom left corner to customize your search.
+
+</div>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" >To see the results, close this window.</button>
+   </div> <div class="modal-footer">
+    
+   <h6><strong>Want to compare more? </strong></h6><p></p>
+💡 If the search results are not satisfactory, change the destination and date to search again.<p></p>
+     
+       <div class="right; badge badge-info">  
+      <select id="mySelect" class="form-control">
+<strong>🔗 Select a link to open in a new tab:</strong>
+<option value="#">🖱️ Click Here to compare with other seach engine</option>
+<option class="form-group" value="https://flight.openmind.travel/flights/BKK1601URT1?locale=en_US&gate_currency=usd&marker=55800.ticketEn.map.Zz0a86fcd29cca43469919dc1c-55800.%241489">I feel Lucky 😃 Today's best deals!</option>
+<option class="form-group" value="https://www.stay22.com/allez/kayak?campaign=2024raisefund&aid=openmind&link=https%3A%2F%2Fwww.kayak.com%2Fflights">Kayak.com</option>
+
+  <option class="form-group" value="https://www.stay22.com/allez/expedia?aid=openmind&campaign=exlinkflight36&address=Bangkok Thailand&category=flight">Expedia.com</option>
+  <option class="form-group" value="https://www.stay22.com/allez/kayak?campaign=2024raisefund&aid=openmind&link=https%3A%2F%2Fwww.kayak.com%2Fflights">CheapFlight.com</option>
+  <option class="form-group" value="https://clk1.reachclk.com/Y9C9ZP?pub_click_id=openmindtravel&landing_id=263">eSky.com</option>
+  <option class="form-group" value="https://www.trip.com/flights/welcome/?to=home&Allianceid=3750768&SID=18385544&trip_sub1=&trip_sub3=D93145">Trip.com</option>
+ <option class="form-group" value="https://www.agoda.com/flights?cid=1908187">Agoda.com</option>
+ <option class="form-group" value="https://linksredirect.com/?cid=178307&source=linkkit&url=https%3A%2F%2Fwww.cleartrip.com%2F">cleartrip.com</option>
+  </select><p></p>
+</div>
+<div class="modal-footer">
+  </div><div class="right"> <p class="close" data-dismiss="modal" aria-label="Close">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+<lottie-player src="https://lottie.host/51b8b3c3-333d-43ce-bc36-d3dae9d6fc74/qda4GLnaf7.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+</p>
+
+
+</div>
+<p></p>
+
+ 
+  
+</div>
+
+      </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('#myModal').modal('show');
+  setTimeout(function() {
+    $('#overlay').modal('hide');
+}, 500);
+
+});
+var select = document.getElementById("mySelect");
+
+var options = ["#"];
+
+for (var i = 0; i < options.length; i++) {
+  var option = document.createElement("option");
+  option.text = options[i];
+  option.value = options[i];
+
+  select.appendChild(option);
+}
+
+
+select.addEventListener("change", function() {
+  var selectedOption = select.options[select.selectedIndex];
+  var url = selectedOption.value;
+
+  window.open(url, "_blank");
+});
+</script>
+<div class="TPWL-header-content-wrapper">
+
+
+<h2 style="padding-left: 20px;">We found cheap flights [:origin_from:] to [:destination_to:] for [:passengers:].</h2>
+<center> <button type="button" class="btn btn-primary"> <a href="#results"> <h3>Click Here for results</h3></a> </button> </center>
+<p style="padding-left: 20px;">Traveling solo or with a large group can be expensive, especially when it comes to flights. But it doesn't have to be! With a little planning, you can find cheap flights for [:passengers:] from [:origin_from:] to [:destination_to:] in economy class.</p>
+
+
+<h2 style="padding-left: 20px;"><strong>How to Find Cheap Flights [:origin_from:] to [:destination_to:]: </strong></h2>
+<p style="padding-left: 20px;"><strong>Here are some tips for finding cheap flights for [:passengers:] [:origin_from:] to [:destination_to:]: in [:trip_type:] class, departing  [:depart_date:]).</strong></p>
+
+
+<ul>
+ 	<li style="list-style-type: none;">
+<ul>
+ 	<li style="list-style-type: none;">
+<ul>
+ 	<li aria-level="1">Be flexible with your travel dates. If you can, fly on weekdays or during the off-season.</li>
+ 	<li aria-level="1">Consider flying into or out of smaller airports. These airports often have lower landing fees, which can translate into lower fares for passengers.</li>
+ 	<li aria-level="1">Book your flights in advance. The earlier you book, the more likely you are to find good deals.</li>
+ 	<li aria-level="1">Use a flights search engine like<a href="//Openmind.Travel"> www.Openmind.Travel</a> to compare prices from different airlines.</li>
+ 	<li aria-level="1">When using a flights search engine, be sure to use filter options to get the best results.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 20px;"><strong>Additional Tips: </strong></p>
+
+
+<ul>
+ 	<li style="list-style-type: none;">
+<ul>
+ 	<li style="list-style-type: none;">
+<ul>
+ 	<li aria-level="1">Sign up for email alerts from airlines and flights search engines so you're notified when there are fare sales or price changes.</li>
+ 	<li aria-level="1">Follow airlines and flights search engines on social media for special offers and discounts.</li>
+ 	<li aria-level="1">Consider using a travel agent to help you find the best deals on flights.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 20px;"><strong>Conclusion:</strong></p>
+<p style="padding-left: 20px;">Finding cheap flights for [:passengers:]  [:origin_from:] to [:destination_to:]  in [:flight_class:] is possible with a little planning. By following the tips above, you can save money on your next trip to [:destination_name:].</p>
+
+</div>
