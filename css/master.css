@@ -222,6 +222,9 @@ body {
   .container {
     max-width: 720px;
   }
+  .widget-search-panel {
+    top: 220px;
+  }
 }
 @media (min-width: 992px) {
   /* Desktops */
@@ -246,12 +249,23 @@ body {
 /* Start Widget Seach Panel */
 .widget-search-panel {
   margin: 20px auto;
-  max-width: 1000px;
   padding: 20px;
-  /* background-color: #ffffffdd; */
-  /* border-radius: 10px; */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  transform: translateY(90%);
+  position: relative;
+  top: 250px;
+}
+
+@media (max-width: 767px) {
+  /* Small Devices => Landscape Phones */
+  .widget-search-panel {
+    top: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Medium Devices => Tablete */
+  .widget-search-panel {
+    top: 220px;
+  }
 }
 /* End Widget Seach Panel */
 
@@ -321,7 +335,7 @@ body {
 
 /* Start Hero Body */
 
-.hero-body {
+/* .hero-body {
 }
 
 @media (max-width: 580px) {
@@ -333,7 +347,7 @@ body {
     transform: translateY(33%);
     padding: 5px 0px;
   }
-}
+} */
 
 /* Start Search Panel */
 .search-panel {

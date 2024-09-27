@@ -178,103 +178,110 @@
           </div>
         </div>
 
-        <div class="widget-search-panel">
-          <script async
-            src="https://tp.media/content?currency=usd&trs=275498&shmarker=493744&combine_promos=101_7873&show_hotels=true&powered_by=false&locale=en&searchUrl=flights.openmind.travel%2Fflights&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&no_labels=true&plain=true&promo_id=7879&campaign_id=100"
-            charset="utf-8"></script>
+        <div class="container">
+          <div class="widget-search-panel">
+            <script async
+              src="https://tp.media/content?currency=usd&trs=275498&shmarker=493744&combine_promos=101_7873&show_hotels=true&powered_by=false&locale=en&searchUrl=flights.openmind.travel%2Fflights&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&no_labels=true&plain=true&promo_id=7879&campaign_id=100"
+              charset="utf-8"></script>
+          </div>
         </div>
+        
       </div>
 
       <!-- End Search Panel -->
 
-      <!-- Start Search Panel - Mobile -->
-      <div class="search-panel-mobile">
-        <div class="form-row">
-          <select>
-            <option value="flight">Flight</option>
-            <option value="hotel">Hotel</option>
-            <option value="rent-car">Rent a Car</option>
-          </select>
+      <div class="hidden-search-panel">
+        <!-- Start Search Panel - Mobile -->
+        <div class="search-panel-mobile">
+          <div class="form-row">
+            <select>
+              <option value="flight">Flight</option>
+              <option value="hotel">Hotel</option>
+              <option value="rent-car">Rent a Car</option>
+            </select>
+          </div>
+
+          <form class="form-style">
+            <div class="tabs">
+              <table class="styled-table">
+                <tr>
+                  <td>
+                    <div class="cell-content">
+                      <img src="../res/img/icons/material-symbols_airplane-ticket.svg" />
+                      <select>
+                        <option value="round-trip">Return</option>
+                        <option value="one-way">1-way</option>
+                        <option value="multi-city">Multi</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cell-content">
+                      <img src="../res/img/icons/bi_people-fill.svg" />
+                      <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cell-content">
+                      <img src="../res/img/icons/mingcute_seat-fill.svg" />
+                      <select>
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first">First</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="form-row location-inputs">
+              <div class="input-group from">
+                <label for="my-origin-input">From</label>
+                <input type="text" id="my-origin-input" placeholder="Country, City, or Airport" />
+                <img src="../res/img/icons/icomoon-free_cross.svg" />
+                <div class="switch-btn">
+                  <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
+                </div>
+              </div>
+
+              <div class="input-group to">
+                <label for="my-destination-input">To</label>
+                <input type="text" id="my-destination-input" placeholder="Country, City, or Airport" />
+                <img src="../res/img/icons/icomoon-free_cross.svg" />
+              </div>
+            </div>
+            <div class="form-row date-inputs">
+              <div class="input-group departure">
+                <div class="date-mobile">
+                  <label for="departure">Departure</label>
+                  <input type="date" id="departure" />
+                </div>
+              </div>
+              <div class="input-group return">
+                <div class="date-mobile">
+                  <label for="return">Return</label>
+                  <input type="date" id="return" />
+                </div>
+              </div>
+            </div>
+            <button type="submit">Search Flights</button>
+
+          </form>
         </div>
+        <!-- End Search Panel - Mobile -->
 
-        <form class="form-style">
-          <div class="tabs">
-            <table class="styled-table">
-              <tr>
-                <td>
-                  <div class="cell-content">
-                    <img src="../res/img/icons/material-symbols_airplane-ticket.svg" />
-                    <select>
-                      <option value="round-trip">Return</option>
-                      <option value="one-way">1-way</option>
-                      <option value="multi-city">Multi</option>
-                    </select>
-                  </div>
-                </td>
-                <td>
-                  <div class="cell-content">
-                    <img src="../res/img/icons/bi_people-fill.svg" />
-                    <select>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                    </select>
-                  </div>
-                </td>
-                <td>
-                  <div class="cell-content">
-                    <img src="../res/img/icons/mingcute_seat-fill.svg" />
-                    <select>
-                      <option value="economy">Economy</option>
-                      <option value="business">Business</option>
-                      <option value="first">First</option>
-                    </select>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="form-row location-inputs">
-            <div class="input-group from">
-              <label for="my-origin-input">From</label>
-              <input type="text" id="my-origin-input" placeholder="Country, City, or Airport" />
-              <img src="../res/img/icons/icomoon-free_cross.svg" />
-              <div class="switch-btn">
-                <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
-              </div>
-            </div>
-
-            <div class="input-group to">
-              <label for="my-destination-input">To</label>
-              <input type="text" id="my-destination-input" placeholder="Country, City, or Airport" />
-              <img src="../res/img/icons/icomoon-free_cross.svg" />
-            </div>
-          </div>
-          <div class="form-row date-inputs">
-            <div class="input-group departure">
-              <div class="date-mobile">
-                <label for="departure">Departure</label>
-                <input type="date" id="departure" />
-              </div>
-            </div>
-            <div class="input-group return">
-              <div class="date-mobile">
-                <label for="return">Return</label>
-                <input type="date" id="return" />
-              </div>
-            </div>
-          </div>
-          <button type="submit">Search Flights</button>
-
-        </form>
       </div>
-      <!-- End Search Panel - Mobile -->
+
     </div>
   </div>
 
