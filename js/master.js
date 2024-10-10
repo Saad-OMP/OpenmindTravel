@@ -223,17 +223,6 @@ bulletsSpan.forEach((span) => {
   });
 });
 
-// Reset Button
-document.querySelector(".reset-options").onclick = function () {
-  // localStorage.clear();
-  localStorage.removeItem("color_option");
-  localStorage.removeItem("background_option");
-  localStorage.removeItem("bullets_option");
-
-  // Reload Window
-  window.location.reload();
-};
-
 // Toggle Menu
 let toggleBtn = document.querySelector(".toggle-menu");
 let theLinks = document.querySelector(".links");
