@@ -218,7 +218,18 @@ body {
   padding-bottom: 50px;
   /* margin: 50px 0px; */
   margin: 0 auto;
-  padding-horizontal: auto;
+}
+
+.special-offers .content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .special-offers .content {
+    flex-direction: column;
+  }
 }
 
 /* Start Footer */
