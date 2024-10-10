@@ -122,16 +122,14 @@ body {
 .introduction-text {
   position: relative;
   background: rgba(255, 255, 255, 0.5);
-  left: 0px;
-  top: 100px;
-  z-index: 2;
+  /* z-index: 2; */
   color: #191919;
   border-radius: 8px;
   text-align: left;
-  padding: 10px;
-
-  width: 370px;
-  height: 120px;
+  padding: 0px 10px 0px 10px;
+  margin: 100px 10px 0px 10px;
+  width: 316px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -140,19 +138,19 @@ body {
   font-weight: 400;
   margin: 0 0 12px;
 }
-@media (max-width: 580px) {
+@media (max-width: 575px) {
   .introduction-text {
     position: relative;
     background: rgba(255, 255, 255, 0.5);
-    left: 0px;
-    top: 100px;
+    /* left: 0px; */
+    /* top: 100px; */
     z-index: 2;
     color: #191919;
     border-radius: 8px;
     text-align: left;
     padding: 10px;
-
-    width: 308px;
+    margin: 100px 10px 0px 10px;
+    width: 260px;
     height: 120px;
     display: flex;
     flex-direction: column;
@@ -201,6 +199,28 @@ body {
 }
 /* End Landing Page */
 
+/* Start Flight Map */
+.flight-map {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* margin: 50px 0px; */
+}
+/* End Flight Map */
+
+.destinations {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* margin: 50px 0px; */
+}
+
+.special-offers {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* margin: 50px 0px; */
+  margin: 0 auto;
+  padding-horizontal: auto;
+}
+
 /* Start Footer */
 .footer {
   background-color: #333;
@@ -223,7 +243,7 @@ body {
     max-width: 720px;
   }
   .widget-search-panel {
-    top: 220px;
+    /* top: 220px; */
   }
 }
 @media (min-width: 992px) {
@@ -241,7 +261,7 @@ body {
 /* End Grid System */
 
 /* Start Hidden Search Panel */
-.hidden-search-panel{
+.hidden-search-panel {
   display: none;
 }
 /* End Hidden Search Panel */
@@ -251,20 +271,22 @@ body {
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  top: 250px;
+  /* top: 250px; */
 }
 
 @media (max-width: 767px) {
   /* Small Devices => Landscape Phones */
   .widget-search-panel {
-    top: 90px;
+    /* top: 90px; */
+    margin: 30px 0px 0px 0px;
   }
 }
 
 @media (min-width: 768px) {
   /* Medium Devices => Tablete */
   .widget-search-panel {
-    top: 220px;
+    /* top: 220px; */
+    margin: 220px 0px 0px 0px;
   }
 }
 /* End Widget Seach Panel */

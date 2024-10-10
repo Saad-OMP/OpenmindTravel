@@ -44,85 +44,6 @@ if (backgroundLocalItem !== null) {
   }
 }
 
-// Toggle Spin Class On Icon
-document.querySelector(".toggle-settings .fa-gear").onclick = function () {
-  // Toggle Class Fa-spin for Rotation on Self
-  this.classList.toggle("fa-spin");
-
-  //Toggle class Open on Main Settings Box
-  document.querySelector(".settings-box").classList.toggle("open");
-};
-
-// Switch Colors
-const colorsLi = document.querySelectorAll(".colors-list li");
-
-// Loop on All List Items
-colorsLi.forEach((li) => {
-  // Click on Each List Item
-  li.addEventListener("click", (e) => {
-    // Set Color on Root
-    document.documentElement.style.setProperty(
-      "--main-color",
-      e.target.dataset.color
-    );
-
-    // Set Color on Local Storage
-    localStorage.setItem("color_option", e.target.dataset.color);
-
-    handleActive(e);
-  });
-});
-
-// Switch Background Random Images
-const randomBackEl = document.querySelectorAll(".random-backgrounds span");
-
-// Loop on All Spans
-randomBackEl.forEach((span) => {
-  // Click on Each Span
-  span.addEventListener("click", (e) => {
-    handleActive(e);
-
-    if (e.target.dataset.background === "yes") {
-      backgroundOption = true;
-
-      randomizeImgs();
-
-      localStorage.setItem("background_option", true);
-    } else {
-      backgroundOption = false;
-
-      clearInterval(backgroundInterval);
-
-      localStorage.setItem("background_option", false);
-    }
-  });
-});
-
-// Select Landing Page Element
-let landingPage = document.querySelector(".landing-page");
-
-//Get Array of Images
-let imgsArray = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
-
-// Change Background Image Url
-landingPage.style.backgroundImage = 'url("imgs/02.jpg")';
-
-// Funtion to Randomize Images
-function randomizeImgs() {
-  if (backgroundOption === true) {
-    backgroundInterval = setInterval(() => {
-      // Get Random Number (0 to 4)
-      let randomNumber = Math.floor(Math.random() * imgsArray.length);
-
-      // Change Background Image Url
-      landingPage.style.backgroundImage =
-        'url("imgs/' + imgsArray[randomNumber] + '")';
-    }, 10000);
-  }
-}
-
-randomizeImgs();
-
 // Select Skills Selector
 let ourSkills = document.querySelector(".skills");
 
@@ -231,7 +152,7 @@ ourGallery.forEach((img) => {
 });
 
 // Select All Bullets
-const allBullets = document.querySelectorAll(".nav-bullets .bullet");
+// const allBullets = document.querySelectorAll(".nav-bullets .bullet");
 
 // Select All Links
 const allLinks = document.querySelectorAll(".links a");
@@ -239,16 +160,18 @@ const allLinks = document.querySelectorAll(".links a");
 function scrollToElement(elements) {
   elements.forEach((ele) => {
     ele.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.querySelector(e.target.dataset.section).scrollIntoView({
-        behavior: "smooth",
-      });
+      // Check if the link is external
+      if (e.target.href.startsWith(window.location.origin)) {
+        e.preventDefault();
+        document.querySelector(e.target.dataset.section).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     });
   });
 }
 
-scrollToElement(allBullets);
+// scrollToElement(allBullets);
 scrollToElement(allLinks);
 
 // Handle Active State
