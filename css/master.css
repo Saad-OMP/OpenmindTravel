@@ -7,6 +7,17 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+.scroller {
+  background-color: var(--main-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  width: 100px;
+  height: 5px;
+}
+
 .container {
   /* width: 1170px; */
   margin: auto;
@@ -67,7 +78,7 @@ body {
 
 .header-area .links li {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 40px;
   justify-content: space-around;
 }
 
@@ -177,9 +188,9 @@ body {
     padding: 10px;
     display: block;
     position: absolute;
-    left: 0;
+    right: 20px;
     top: 78px;
-    width: 100%;
+    width: 70%;
     border-radius: 4px;
     text-align: left;
     z-index: 2000;
@@ -232,6 +243,11 @@ body {
   }
 }
 
+/* Start Inifinite Scrolling */
+.trusted-by-section {
+}
+/* End Inifinite Scrolling */
+
 /* Start Footer */
 .footer {
   background-color: #333;
@@ -270,12 +286,6 @@ body {
   }
 }
 /* End Grid System */
-
-/* Start Hidden Search Panel */
-.hidden-search-panel {
-  display: none;
-}
-/* End Hidden Search Panel */
 
 /* Start Widget Seach Panel */
 .widget-search-panel {
@@ -828,3 +838,47 @@ body {
 }
 
 /* End Hero Body */
+
+.trusted-by-section {
+  padding: 20px 0;
+  background-color: #484848;
+  text-align: center;
+}
+
+.logo-container {
+  overflow: hidden; /* Ensures logos stay within bounds */
+  white-space: nowrap; /* Ensures logos display in a single line */
+  position: relative;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  animation: scroll 20s linear infinite;
+}
+
+.logos img {
+  height: 40px;
+  padding: 0 20px; /* Add space between logos */
+}
+
+/* Keyframes for infinite scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Duplicate the logos using CSS, not JS */
+.logos::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 200%; /* To make sure enough space is covered */
+  background: inherit; /* Use the same container with logos */
+}

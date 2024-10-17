@@ -14,6 +14,8 @@
 
 <body>
 
+  <div class="scroller"></div>
+
   <!-- Start Landing Page -->
   <div class="landing-page">
     <div class="overlay"></div>
@@ -52,133 +54,6 @@
     <div class="hero-body">
       <!-- Start Search Panel -->
       <div>
-        <div class="hidden-search-panel">
-
-          <div class="search-panel">
-            <ul class="tabs">
-              <div class="tab-link current" data-tab="flight">
-                <li>Flight</li>
-              </div>
-              <div class="tab-link" data-tab="hotel">
-                <li>Hotel</li>
-              </div>
-              <div class="tab-link" data-tab="rent-car">
-                <li>Rent a Car</li>
-              </div>
-            </ul>
-
-            <div class="tab-content current" id="flight">
-              <form>
-                <div class="form-row">
-                  <select>
-                    <option value="round-trip">Return</option>
-                    <option value="one-way">One-way</option>
-                    <option value="multi-city">Multi-city</option>
-                  </select>
-                  <select>
-                    <option value="1">1 Passenger</option>
-                    <option value="2">2 Passengers</option>
-                    <option value="3">3 Passengers</option>
-                    <option value="4">4 Passengers</option>
-                    <option value="5">5 Passengers</option>
-                    <option value="6">6 Passengers</option>
-                  </select>
-                  <select>
-                    <option value="economy">Economy</option>
-                    <option value="business">Business</option>
-                    <option value="first">First</option>
-                  </select>
-                </div>
-                <div class="form-row location-inputs">
-                  <div class="input-group from">
-                    <h6>FROM</h6>
-                    <input type="text" id="my-origin-input" placeholder="Country, City, or Airport" />
-                    <h6>A/P, Dep, Country</h6>
-                    <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
-                  </div>
-                  <div class="input-group to">
-                    <h6>TO</h6>
-                    <input type="text" id="my-destination-input" placeholder="Country, City, or Airport" />
-                    <h6>A/P, Dep, Country</h6>
-                  </div>
-                </div>
-                <div class="form-row date-inputs">
-                  <div class="input-group dates">
-
-                    <div class="departure">
-                      <h6>Departure</h6>
-                      <input type="date" id="my-depart-date-input" />
-                      <div class="date-control">
-                        <ul>
-                          <li>Prev</li>
-                          <li>Next</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="return">
-                      <h6>Return</h6>
-                      <input type="date" id="my-return-date-input" />
-                      <div class="date-control">
-                        <ul>
-                          <li>Prev</li>
-                          <li>Next</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <button id="my-search-button" type="submit">Search Flights &rarr;</button>
-              </form>
-            </div>
-            <div class="tab-content" id="hotel">
-              <form>
-                <div class="input-group">
-                  <label for="hotel-destination">Destination</label>
-                  <input type="text" id="hotel-destination" placeholder="Destination" />
-                </div>
-                <div class="form-row">
-                  <div class="input-group">
-                    <label for="check-in">Check-in</label>
-                    <input type="date" id="check-in" />
-                  </div>
-                  <div class="input-group">
-                    <label for="check-out">Check-out</label>
-                    <input type="date" id="check-out" />
-                  </div>
-                </div>
-                <button type="submit">Search Hotels &rarr;</button>
-              </form>
-            </div>
-            <div class="tab-content" id="rent-car">
-              <form>
-                <div class="input-group">
-                  <label for="pick-up">Pick-up Location</label>
-                  <input type="text" id="pick-up" placeholder="Pick-up Location" />
-                </div>
-                <div class="form-row">
-                  <div class="input-group">
-                    <label for="pick-up-date">Pick-up Date</label>
-                    <input type="date" id="pick-up-date" />
-                  </div>
-                  <div class="input-group">
-                    <label for="drop-off-date">Drop-off Date</label>
-                    <input type="date" id="drop-off-date" />
-                  </div>
-                </div>
-                <button type="submit">Search Cars &rarr;</button>
-              </form>
-            </div>
-          </div>
-
-          <div class="hidden-search-panel">
-            <h1></h1>
-            <script async
-              src="https://tp.media/content?currency=usd&trs=275498&shmarker=493744&combine_promos=101_7873&show_hotels=true&powered_by=false&locale=en&searchUrl=flights.openmind.travel%2Fflights&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&no_labels=true&plain=true&promo_id=7879&campaign_id=100"
-              charset="utf-8"></script>
-          </div>
-        </div>
 
         <div class="container">
           <div class="widget-search-panel">
@@ -191,98 +66,6 @@
       </div>
 
       <!-- End Search Panel -->
-
-      <div class="hidden-search-panel">
-        <!-- Start Search Panel - Mobile -->
-        <div class="search-panel-mobile">
-          <div class="form-row">
-            <select>
-              <option value="flight">Flight</option>
-              <option value="hotel">Hotel</option>
-              <option value="rent-car">Rent a Car</option>
-            </select>
-          </div>
-
-          <form class="form-style">
-            <div class="tabs">
-              <table class="styled-table">
-                <tr>
-                  <td>
-                    <div class="cell-content">
-                      <img src="../res/img/icons/material-symbols_airplane-ticket.svg" />
-                      <select>
-                        <option value="round-trip">Return</option>
-                        <option value="one-way">1-way</option>
-                        <option value="multi-city">Multi</option>
-                      </select>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="cell-content">
-                      <img src="../res/img/icons/bi_people-fill.svg" />
-                      <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                      </select>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="cell-content">
-                      <img src="../res/img/icons/mingcute_seat-fill.svg" />
-                      <select>
-                        <option value="economy">Economy</option>
-                        <option value="business">Business</option>
-                        <option value="first">First</option>
-                      </select>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="form-row location-inputs">
-              <div class="input-group from">
-                <label for="my-origin-input">From</label>
-                <input type="text" id="my-origin-input" placeholder="Country, City, or Airport" />
-                <img src="../res/img/icons/icomoon-free_cross.svg" />
-                <div class="switch-btn">
-                  <img src="../res/img/icons/clarity_two-way-arrows-line.svg" />
-                </div>
-              </div>
-
-              <div class="input-group to">
-                <label for="my-destination-input">To</label>
-                <input type="text" id="my-destination-input" placeholder="Country, City, or Airport" />
-                <img src="../res/img/icons/icomoon-free_cross.svg" />
-              </div>
-            </div>
-            <div class="form-row date-inputs">
-              <div class="input-group departure">
-                <div class="date-mobile">
-                  <label for="departure">Departure</label>
-                  <input type="date" id="departure" />
-                </div>
-              </div>
-              <div class="input-group return">
-                <div class="date-mobile">
-                  <label for="return">Return</label>
-                  <input type="date" id="return" />
-                </div>
-              </div>
-            </div>
-            <button type="submit">Search Flights</button>
-
-          </form>
-        </div>
-        <!-- End Search Panel - Mobile -->
-
-      </div>
 
     </div>
   </div>
@@ -300,6 +83,7 @@
   </div>
   <!-- End Flight Map -->
 
+  <!-- Start Destinations -->
   <div class="destinations">
     <div class="container">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
@@ -325,7 +109,9 @@
       </div>
     </div>
   </div>
+  <!-- End Destinations -->
 
+  <!-- Start Special Offers -->
   <div class="special-offers">
     <div class="container">
 
@@ -347,25 +133,49 @@
 
     </div>
   </div>
+  <!-- End Special Offers -->
 
-  </div>
-  </div>
+
+  <!-- Start Inifinite Scrolling -->
+  <section class="trusted-by-section">
+    <div class="logo-container">
+      <div class="logos">
+        <img src="imgs/logo_trusted_by/bangkok_post.png" alt="Bangkok Post" />
+        <img src="imgs/logo_trusted_by/cisco.png" alt="Cisco" />
+        <img src="imgs/logo_trusted_by/cnn.png" alt="CNN" />
+        <img src="imgs/logo_trusted_by/columbia_business_school.png" alt="Columbia Business School" />
+        <img src="imgs/logo_trusted_by/cornell_university.png" alt="Cornell University" />
+        <img src="imgs/logo_trusted_by/digital_lift.jpg" alt="Digital Lift" />
+        <img src="imgs/logo_trusted_by/google.png" alt="Google" />
+        <img src="imgs/logo_trusted_by/HBS.png" alt="HBS" />
+        <img src="imgs/logo_trusted_by/ifrc.png" alt="IFRC" />
+        <img src="imgs/logo_trusted_by/LiU.png" alt="LiU" />
+        <img src="imgs/logo_trusted_by/lonely_planet.png" alt="Lonely Planet" />
+        <img src="imgs/logo_trusted_by/microsoft.png" alt="Microsoft" />
+        <img src="imgs/logo_trusted_by/riot_games.jpg" alt="Riot Games" />
+        <img src="imgs/logo_trusted_by/rotary_club.png" alt="Rotary Club" />
+        <img src="imgs/logo_trusted_by/techsoup.svg" alt="TechSoup" />
+        <img src="imgs/logo_trusted_by/top-rated.png" alt="Top Rated" />
+        <img src="imgs/logo_trusted_by/unesco.png" alt="UNESCO" />
+        <img src="imgs/logo_trusted_by/vetted-globalgiving-2017.png" alt="Vetted GlobalGiving" />
+        
+      </div>
+    </div>
+  </section>
+  <!-- End Inifinite Scrolling -->
 
 
   <!-- Start Footer -->
   <div class="footer">Website Under Development</div>
   <!-- End Footer -->
 
+
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="js/master.js"></script>
   <script src="js/search-sync.js"></script>
 
 
-
-
   <!-- <script src="js/widget.js"></script> -->
-
-
 
 </body>
 
