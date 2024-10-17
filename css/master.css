@@ -173,6 +173,60 @@ body {
   /* color: var(--main-color); */
   font-weight: bold;
 }
+
+/* Start Welcome Banner */
+.banner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* margin: 50px 0px; */
+}
+.banner .welcome-banner-container {
+  background-color: black;
+}
+
+.banner .welcome-banner-container .welcome-banner {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
+
+.banner .welcome-banner-container .welcome-banner span {
+  font-size: 33px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1;
+  mix-blend-mode: difference;
+}
+
+.banner .welcome-banner-container .welcome-banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: white;
+  animation: move 4s linear infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 100px);
+  }
+}
+
+@media (max-width: 767px) {
+  .banner .welcome-banner-container .welcome-banner span {
+    font-size: 20px;
+  }
+}
+/* End Welcome Banner */
+
 @media (max-width: 991px) {
   .header-area .links {
     display: none;
