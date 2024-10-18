@@ -297,6 +297,17 @@ body {
   }
 }
 
+/* Start Typewriter */
+#app {
+   font-size: 1.1em;
+  /*letter-spacing: 5px; */
+  /* font-size: 34px; */
+  font-family: monospace;
+}
+.typed-text {
+}
+/* End Typewriter*/
+
 /* Start Inifinite Scrolling */
 .trusted-by-section {
 }

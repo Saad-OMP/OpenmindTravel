@@ -1,14 +1,44 @@
+// TODO fix the menu, make it close when a link is clicked
+// TODO add phone menu for links
+// TODO typewriter effect tips = DONE
+// TODO add the two bottom buttons in the hero section
+// TODO fix the infinite scroll
+
+// Start Typewriter
+var app = document.getElementById("app");
+
+var Typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 35,
+  deleteSpeed: 10,
+});
+
+Typewriter
+  .pauseFor(2000)
+  .typeString('Help us raise funds to help poor children, at <strong>no extra cost to you!</strong>')
+  .pauseFor(500)
+  .deleteChars(67)
+  .typeString('By visiting our website you help raise funds. Raise more by <strong>searching</strong> and <strong>comparing</strong> travel deals.')
+  .pauseFor(500)
+  .deleteChars(51)
+  .typeString('<strong><span style="color:#196AFB">Tell you friends.</span></strong>')
+  .pauseFor(1000)
+  .deleteChars(64)
+  .typeString('For every ticket you purchase, a portion of the proceeds directly funds <strong>underprivileged children\'s education<Strong>.')
+  .pauseFor(1000)
+  .start();
+// End Typewriter
+
 let scroller = document.querySelector(".scroller");
 
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;
   let totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-  
+
   let scrolledPercentage = (scrollTop / totalHeight) * 100;
-  
+
   scroller.style.width = `${scrolledPercentage}%`;
 });
-
 
 // Select All Links
 const allLinks = document.querySelectorAll(".links a");
@@ -113,21 +143,20 @@ theLinks.onclick = function (e) {
   e.stopPropagation();
 };
 
-
 // Tab switching functionality for the search panel
-document.querySelectorAll('.tab-link').forEach(tab => {
-    tab.addEventListener('click', function() {
-        let tab_id = this.dataset.tab;
+document.querySelectorAll(".tab-link").forEach((tab) => {
+  tab.addEventListener("click", function () {
+    let tab_id = this.dataset.tab;
 
-        document.querySelectorAll('.tab-link').forEach(tab => {
-            tab.classList.remove('current');
-        });
-
-        document.querySelectorAll('.tab-content').forEach(content => {
-            content.classList.remove('current');
-        });
-
-        this.classList.add('current');
-        document.getElementById(tab_id).classList.add('current');
+    document.querySelectorAll(".tab-link").forEach((tab) => {
+      tab.classList.remove("current");
     });
+
+    document.querySelectorAll(".tab-content").forEach((content) => {
+      content.classList.remove("current");
+    });
+
+    this.classList.add("current");
+    document.getElementById(tab_id).classList.add("current");
+  });
 });
